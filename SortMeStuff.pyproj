@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>0589d750-6632-4542-8e83-a172f13b501a</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>sort_me_stuff.py</StartupFile>
+    <StartupFile>app\sort_me_stuff.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,7 +22,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="sort_me_stuff.py" />
+    <Compile Include="app\file_selector.py" />
+    <Compile Include="app\wmain.py" />
+    <Compile Include="app\sort_me_stuff.py" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="SortMeStuff_env\">
@@ -36,7 +38,10 @@
     </Interpreter>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="requirements.txt" />
+    <Content Include="app\requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
