@@ -23,6 +23,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app\file_selector.py" />
+    <Compile Include="app\pathstreeview.py" />
     <Compile Include="app\wmain.py" />
     <Compile Include="app\sort_me_stuff.py" />
   </ItemGroup>
