@@ -45,10 +45,11 @@ class MainWidget:
 			width=width,
 		)
 		self._Frame.grid(row=0, column=0, sticky="news")
+		self._Frame.grid_propagate(False)
 
 	def _buildwindow(self):
 		self._Window = Tk()
 		self._Window.title(self._WINDOW_TITLE)
 		self._Window.columnconfigure(0, weight=1)
 		self._Window.grid_rowconfigure(0, weight=1)
-	
+		

@@ -1,7 +1,6 @@
-from tkinter import Tk
 from wmain import MainWidget
 
-__INITIAL_HEIGHT = 480
+__INITIAL_HEIGHT = 640
 __INITIAL_WIDTH = 960
 
 __wmain:MainWidget = MainWidget()
