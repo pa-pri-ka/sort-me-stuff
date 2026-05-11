@@ -28,7 +28,7 @@ class MainWidget:
 		self._ScanButton = ttk.Button(self._Frame, text="Compare").grid(column=2, row=0)
 		# TreeViews
 		self._PathTreeviewLeft = PathsTreeView().Add(self._Frame, 1, 0, 2)
-		self.__pathTreeviewRight = PathsTreeView().Add(self._Frame, 1, 3, 2)
+		self._PathTreeviewRight = PathsTreeView().Add(self._Frame, 1, 3, 2)
 
 	def mainloop(self):
 		if self._Window == None:
