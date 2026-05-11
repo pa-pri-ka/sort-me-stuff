@@ -1,54 +1,54 @@
 from tkinter import Tk, ttk
-from app.pathstreeview import PathsTreeView
-from file_selector import FileSelector
+from pathstreeview import PathsTreeView
+from fileselector import FileSelector
 
 
 class MainWidget:
 
-	__FILE_SELECTORS_ROW = 0
-	__WINDOW_TITLE = "Sort Me Stuff"
+	_FILE_SELECTORS_ROW = 0
+	_WINDOW_TITLE = "Sort Me Stuff"
 
-	__file_selector_left: FileSelector = None
-	__file_selector_right: FileSelector = None
-	__frame = None
-	__path_treeview_left: PathsTreeView = None
-	__path_treeview_Right: PathsTreeView = None
-	__scan_button = None
-	__window = None
+	_FileSelectorLeft: FileSelector = None
+	_FileSelectorRight: FileSelector = None
+	_Frame = None
+	_PathTreeviewLeft: PathsTreeView = None
+	_PathTreeviewRight: PathsTreeView = None
+	_ScanButton = None
+	_Window = None
 
 	def display(self, width, height):
-		self.__buildwindow()
-		self.__buildframe(width=width, height=height)
+		self._buildwindow()
+		self._buildframe(width=width, height=height)
 		# Define UI rows' behavior
-		self.__frame.rowconfigure(1, weight=1)
+		self._Frame.rowconfigure(1, weight=1)
 		# File Selectors
-		self.__file_selector_left = FileSelector().add(self.__frame, self.__FILE_SELECTORS_ROW, 0)
-		self.__file_selector_right = FileSelector().add(self.__frame, self.__FILE_SELECTORS_ROW, 3)
+		self._FileSelectorLeft = FileSelector().Add(self._Frame, self._FILE_SELECTORS_ROW, 0)
+		self._FileSelectorRight = FileSelector().Add(self._Frame, self._FILE_SELECTORS_ROW, 3)
 		# Scan Button
-		self.__scan_button = ttk.Button(self.__frame, text="Compare").grid(column=2, row=0)
+		self._ScanButton = ttk.Button(self._Frame, text="Compare").grid(column=2, row=0)
 		# TreeViews
-		self.__path_treeview_left = PathsTreeView().add(self.__frame, 1, 0, 2)
-		self.__path_treeview_right = PathsTreeView().add(self.__frame, 1, 3, 2)
+		self._PathTreeviewLeft = PathsTreeView().Add(self._Frame, 1, 0, 2)
+		self.__pathTreeviewRight = PathsTreeView().Add(self._Frame, 1, 3, 2)
 
 	def mainloop(self):
-		if self.__window == None:
+		if self._Window == None:
 			raise AttributeError(
 				"MainWidget is not displayed, so mainloop() cannot be invoked"
 			)
-		self.__window.mainloop()
+		self._Window.mainloop()
 		
-	def __buildframe(self, width, height):
-		self.__frame = ttk.Frame(
-			self.__window,
+	def _buildframe(self, width, height):
+		self._Frame = ttk.Frame(
+			self._Window,
 			height=height,
 			padding=8,
 			width=width,
 		)
-		self.__frame.grid(row=0, column=0, sticky="news")
+		self._Frame.grid(row=0, column=0, sticky="news")
 
-	def __buildwindow(self):
-		self.__window = Tk()
-		self.__window.title(self.__WINDOW_TITLE)
-		self.__window.columnconfigure(0, weight=1)
-		self.__window.grid_rowconfigure(0, weight=1)
+	def _buildwindow(self):
+		self._Window = Tk()
+		self._Window.title(self._WINDOW_TITLE)
+		self._Window.columnconfigure(0, weight=1)
+		self._Window.grid_rowconfigure(0, weight=1)
 	
