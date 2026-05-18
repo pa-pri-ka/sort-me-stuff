@@ -1,16 +1,19 @@
-from doctest import master
 from tkinter import StringVar, ttk
 
 
 class FileSelector:
 
-	_BUTTON_LABEL = "Browse..."
+    _BUTTON_LABEL = "Browse..."
 
-	_Path = None
+    _Path = None
 
-	def Add(self, parentframe: ttk.Frame, atgridrow, atgridcolumn):
-		parentframe.grid_columnconfigure(atgridcolumn, weight=1)
-		self._Path = StringVar()
-		ttk.Entry(parentframe, textvariable=self._Path, width=50).grid(column=atgridcolumn, row=atgridrow, sticky="news")
-		ttk.Button(parentframe, text=self._BUTTON_LABEL).grid(column=atgridcolumn + 1, row=atgridrow)
-		return self
+    def Add(self, parentframe, at_row, at_col):
+        parentframe.grid_columnconfigure(at_col, weight=1)
+        self._Path = StringVar()
+        ttk.Entry(parentframe, textvariable=self._Path, width=50).grid(
+            column=at_col, row=at_row, sticky="news"
+        )
+        ttk.Button(parentframe, text=self._BUTTON_LABEL).grid(
+            column=at_col + 1, row=at_row
+        )
+        return self
