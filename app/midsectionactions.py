@@ -14,17 +14,11 @@ class MidSectionActions:
         DELETE_LEFT = "deleteleft"
         DELETE_RIGHT = "deleteright"
 
-    def __init__(self, parentframe, row, col):
-        self._col = col
-        self._parentframe = parentframe
-        self._row = row
-        self._build()
-
     _ActionButtons = {}
 
-    def _build(self):
-        leftcol = ttk.Frame(self._parentframe)
-        leftcol.grid(row=self._row, column=self._col, sticky="news")
+    def Add(self, parentgrid, row, col):
+        leftcol = ttk.Frame(parentgrid)
+        leftcol.grid(row=row, column=col, sticky="news")
         self._ActionButtons[self.Action.MOVE_LEFT] = ActionButton(
             "Move Left Items To Right Path",
             "Moves the items selected in the left root folder to the same path than the matching items shown on the right. If the path is missing in the left root folder, it will be created.",
@@ -37,8 +31,8 @@ class MidSectionActions:
             "Delete From Left", "Deletes the items selected in the left root folder."
         ).Add(leftcol, 2)
 
-        rightcol = ttk.Frame(self._parentframe)
-        rightcol.grid(row=self._row, column=self._col + 1, sticky="news")
+        rightcol = ttk.Frame(parentgrid)
+        rightcol.grid(row=row, column=col + 1, sticky="news")
         rightcol.rowconfigure(0, weight=1)
         spacer = ttk.Frame(rightcol)
         spacer.grid(sticky="news")
