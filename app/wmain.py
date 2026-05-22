@@ -42,10 +42,8 @@ class MainWidget:
             columnspan=2,
             sticky="we",
         )
-
         # Action buttons
         MidSectionActions().Add(self._Frame, row=self._PATH_TREE_VIEW_ROW, col=self._MID_SECTION_COL)
-        
 
     def mainloop(self):
         if self._Window == None:
