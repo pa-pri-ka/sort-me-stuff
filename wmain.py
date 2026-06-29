@@ -1,6 +1,6 @@
 from tkinter import Tk, ttk
-from app.actionbutton import ActionButton
-from app.midsectionactions import MidSectionActions
+from actionbutton import ActionButton
+from midsectionactions import MidSectionActions
 from pathstreeview import PathsTreeView
 from fileselector import FileSelector
 
