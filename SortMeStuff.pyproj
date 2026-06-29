@@ -11,7 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>SortMeStuff</Name>
     <RootNamespace>SortMeStuff</RootNamespace>
-    <InterpreterId>MSBuild|SortMeStuff_env|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|venv|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,10 +30,10 @@
     <Compile Include="app\sortmestuff.py" />
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include="SortMeStuff_env\">
-      <Id>SortMeStuff_env</Id>
-      <Version>3.9</Version>
-      <Description>SortMeStuff_env (Python 3.9 (64-bit))</Description>
+    <Interpreter Include="venv\">
+      <Id>venv</Id>
+      <Version>3.14.6</Version>
+      <Description>venv (Python 3.14.6 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
