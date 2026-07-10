@@ -16,11 +16,11 @@ class MainWidget:
 
     _WINDOW_TITLE = "Sort Me Stuff"
 
-    _FileSelectorLeft: FileSelector = None
-    _FileSelectorRight: FileSelector = None
-    _Frame = None
-    _PathTreeViewLeft: PathsTreeView = None
-    _PathTreeViewRight: PathsTreeView = None
+    _FileSelectorLeft: FileSelector
+    _FileSelectorRight: FileSelector
+    _Frame: ttk.Frame
+    _PathTreeViewLeft: PathsTreeView
+    _PathTreeViewRight: PathsTreeView
     _Window = None
 
     def display(self, width, height):
