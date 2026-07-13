@@ -5,14 +5,14 @@ Small, ongoing project to practice my Python. The name is to be pronounced using
 The usual useful stuff:
 
 ```powershell
-# setup the virtal environment (if not done already)
-python -m venv venv
+# install pipenv
+pip install --user pipenv
 # activate the virtual environment
-.\venv\Scripts\activate
+pipenv shell
 # install the requirements
-pip install -r .\requirements.txt
+pipenv install
 # run the thing
-py .\sortmestuff.py
+pipenv run py .\app\sortmestuff.py
 # go get some whisky
 ls whisky | grep "^Scottish" > me_belly.txt
 ```
