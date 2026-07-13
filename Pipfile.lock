@@ -1,0 +1,30 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "322a971d4cb08667e5b68f956aff4f95438b821c51d5296adf7c115db47e2206"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.14"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "tkinter-tooltip": {
+            "hashes": [
+                "sha256:5bad74f2d476d9e2418598b2438f06e4b658dd6a89ee39a0bbfebb4fb7fdeb7f",
+                "sha256:dac8a6720c851936dfea2d96f90920a4dac31b46b78379c5e0ef0b6ed8af2964"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.7'",
+            "version": "==3.1.2"
+        }
+    },
+    "develop": {}
+}
