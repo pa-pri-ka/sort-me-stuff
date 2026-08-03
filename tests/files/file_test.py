@@ -2,7 +2,7 @@ import datetime as dt
 import os
 from pathlib import Path
 
-from app.file import File
+from app.files.file import File
 
 LOCATION = "some" + os.path.sep + "path"
 FILE_NAME = "filename.txt"

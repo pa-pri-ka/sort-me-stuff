@@ -1,7 +1,7 @@
 from enum import Enum
 from tkinter import ttk
 
-from actionbutton import ActionButton
+from app.ui.actionbutton import ActionButton
 
 
 class MidSectionActions:

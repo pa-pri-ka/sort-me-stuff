@@ -1,8 +1,9 @@
 from tkinter import Tk, ttk
-from actionbutton import ActionButton
-from midsectionactions import MidSectionActions
-from pathstreeview import PathsTreeView
-from fileselector import FileSelector
+
+from app.ui.actionbutton import ActionButton
+from app.ui.fileselector import FileSelector
+from app.ui.midsectionactions import MidSectionActions
+from app.ui.pathstreeview import PathsTreeView
 
 
 class MainWidget:
@@ -24,10 +25,10 @@ class MainWidget:
     _Window = None
 
     def display(self, width, height):
-        self._buildwindow()
-        self._buildframe(width=width, height=height)
+        self.__buildwindow()
+        self.__buildframe(width=width, height=height)
         # File Selectors
-        self._buildfileselectors()
+        self.__buildfileselectors()
         # Path Tree Views
         self._PathTreeViewLeft = PathsTreeView().Add(
             self._Frame, row=1, col=self._LEFT_SECTION_COL, colspan=2
@@ -52,7 +53,7 @@ class MainWidget:
             )
         self._Window.mainloop()
 
-    def _buildfileselectors(self):
+    def __buildfileselectors(self):
         self._Frame.grid_columnconfigure(self._LEFT_SECTION_COL, weight=1)
         self._FileSelectorLeft = FileSelector().Add(
             self._Frame, self._FILE_SELECTORS_ROW, self._LEFT_SECTION_COL
@@ -62,7 +63,7 @@ class MainWidget:
             self._Frame, self._FILE_SELECTORS_ROW, self._RIGHT_SECTION_COL
         )
 
-    def _buildframe(self, width, height):
+    def __buildframe(self, width, height):
         self._Frame = ttk.Frame(
             self._Window,
             height=height,
@@ -73,7 +74,7 @@ class MainWidget:
         self._Frame.grid_propagate(False)
         self._Frame.rowconfigure(1, weight=1)
 
-    def _buildwindow(self):
+    def __buildwindow(self):
         self._Window = Tk()
         self._Window.title(self._WINDOW_TITLE)
         self._Window.columnconfigure(0, weight=1)

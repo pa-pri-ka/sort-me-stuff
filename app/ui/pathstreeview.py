@@ -27,6 +27,6 @@ class PathsTreeView:
 		# Temp test rows
 		treeview.insert('', index=0, iid=1, values=(1, "☐", "path 1"))
 		treeview.insert('', index=1, iid=2, values=(2, "☑", "path 2"), open=True)
-		treeview.insert(2, index=2, iid=3, values=(3, "☑", "  path 3"))
+		treeview.insert('', index=2, iid=3, values=(3, "☑", "  path 3"))
 		
 		return self

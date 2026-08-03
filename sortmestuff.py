@@ -1,4 +1,4 @@
-from wmain import MainWidget
+from app.ui.wmain import MainWidget
 
 __INITIAL_HEIGHT = 640
 __INITIAL_WIDTH = 960
