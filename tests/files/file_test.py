@@ -21,6 +21,12 @@ def it_instantiates_a_file_and_adds_properties_to_it():
     assert file._File__created == CREATED  # pyright: ignore[reportAttributeAccessIssue]
     assert file._File__updated == UPDATED  # pyright: ignore[reportAttributeAccessIssue]
 
+def it_indicates_whether_a_file_path_ends_with_a_given_string():
+    file = File(PATH, SIZE, CREATED, UPDATED)
+
+    assert file.path_ends_with(FILE_NAME)
+    assert file.path_ends_with("path" + os.path.sep + FILE_NAME)
+    assert not file.path_ends_with(LOCATION)
 
 class TestFilesComparison:
     file = File(PATH, SIZE, CREATED, UPDATED)

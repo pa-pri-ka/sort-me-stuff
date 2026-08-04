@@ -3,6 +3,7 @@ from __future__ import annotations
 import datetime as dt
 import os
 from enum import IntFlag
+from operator import contains
 from pathlib import Path
 
 
@@ -37,7 +38,8 @@ class File:
         )
         return dir_name_diff | file_name_diff | size_diff | created_diff | updated_diff
 
-    
+    def path_ends_with(self, end: str) -> bool:
+        return os.path.join(self.__location, self.__file_name).endswith(end)
 
     class Prop(IntFlag):
         NONE = 0
