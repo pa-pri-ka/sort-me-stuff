@@ -37,6 +37,8 @@ class File:
         )
         return dir_name_diff | file_name_diff | size_diff | created_diff | updated_diff
 
+    
+
     class Prop(IntFlag):
         NONE = 0
         DIR = 1
